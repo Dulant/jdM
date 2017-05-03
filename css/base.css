@@ -1,0 +1,96 @@
+*,
+::before,
+::after{
+    padding: 0;
+    margin: 0;
+    -webkit-box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+body{
+    font-size: 14px;
+    font-family: "Microsoft yahei",sans-serif; /* 第二个字体是手机默认的*/
+    color: #000;
+}
+a{
+    text-decoration: none;
+    color: #000;
+}
+input,textarea{
+    resize: none; /* 让它的大小不可伸缩*/
+    outline: none; /*点击过后外边框的颜色变为没有*/
+    border: none; /*统一外边框的颜色*/
+    -webkit-appearance: none; /*比如苹果手机的一些立体效果*/
+}
+ul{
+    list-style: none;
+}
+/* 清除浮动*/
+.clearfix::before,
+.clearfix::after{
+   content: "";
+   display: block;
+   height: 0;
+   line-height: 0;
+   visibility: hidden;
+   clear: both;
+}
+[class^=icon_],[class*= icon_]{
+    background: url("../images/sprites.png")no-repeat;
+    background-size: 200px 200px;
+}
+.jd_topBar h2{
+    text-align: center;
+    font-size: 16px;
+    font-family: sans-serif;
+    font-weight: inherit;
+    line-height: 44px;
+}
+/*
+头部通栏*/
+.jd_topBar{
+    height: 45px;
+    width: 100%;
+    background: url("../images/header-bg.png")repeat-x;
+    background-size: 1px 44px;
+    border-bottom: 1px solid #e0e0e0;
+    position: absolute;
+    z-index: 1000;
+}
+/*返回按钮*/
+.jd_topBar .icon_back{
+    background-position:-20px 0;
+    width: 20px;
+    height: 20px;
+    display: block;
+    margin: 12px 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+/*搜索*/
+.jd_topBar form{
+    width: 100%;
+    height: 44px;
+    padding: 0 40px;
+}
+.jd_topBar form input{
+    width: 100%;
+    height: 32px;
+    margin-top: 6px;
+    border: 1px solid #bfbfbf;
+    border-radius: 4px;
+    padding-left: 10px;
+}
+/*返回菜单*/
+.jd_topBar .icon_menu{
+    display: block;
+    width: 40px;
+    height: 44px;
+    background-position: -60px 0;
+    padding: 12px 10px;   /*这里还要研究一下*/
+    background-clip: content-box;
+    background-origin: content-box;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
